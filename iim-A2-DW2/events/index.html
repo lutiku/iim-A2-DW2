@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Natif - Events</title>
+    <style>
+        #test
+        {
+            width : 500px ;
+            height: 500px;
+
+            background-color : red ;
+        }
+
+        /*__________________________*/
+        /*Style bouton rtour vers le haut*/
+
+        a#cRetour{
+            border-radius:3px;
+            padding:10px;
+            font-size:15px;
+            text-align:center;
+            color:#fff;
+            background:rgba(0, 0, 0, 0.25);
+            position:fixed;
+            right:20px;
+            opacity:1;
+            z-index:99999;
+            transition:all ease-in 0.2s;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            text-decoration: none;
+        }
+        a#cRetour:before{ content: "\25b2"; }
+        a#cRetour:hover{
+            background:rgba(0, 0, 0, 1);
+            transition:all ease-in 0.2s;
+        }
+        a#cRetour.cInvisible{
+            bottom:-35px;
+            opacity:0;
+            transition:all ease-in 0.5s;
+        }
+
+        a#cRetour.cVisible{
+            bottom:20px;
+            opacity:1;
+        }
+        /*__________________________*/
+
+        /*Style div Scroll*/
+        #myDIV {
+            height: 250px;
+            width: 250px;
+            overflow: auto;
+        }
+
+        #content {
+            height: 800px;
+            width: 2000px;
+            background-color: coral;
+        }
+
+
+        /*_______________________________*/
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+
+    <h1 id="haut">Les Events</h1>
+    <p>Ouvrez la console</p>
+
+
+    <input id="input" type="text">
+
+    <H2>Le click</H2>
+
+    <p> clique au <b>même</b> endroit dans le carrée pour voir le nombre de click augmenter</p>
+
+    <div class="scare" id="test"></div>
+
+    <h2>Copy</h2>
+    <p style="text-align:center;" id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet felis ac lorem mollis,
+        in maximus risus pulvinar. Aliquam accumsan tempus ullamcorper. Sed et leo pretium, aliquam odio vitae,
+        viverra orci. Nulla scelerisque efficitur eros et lobortis. Nam sed mauris eget lectus condimentum tristique in ac diam.
+        Etiam euismod orci eget urna faucibus, id semper elit ullamcorper. Cras at augue quis tortor cursus gravida. Vivamus vehicula,
+        urna non dictum vehicula, urna augue porta neque, sit amet efficitur turpis odio quis mi. Proin sagittis eros et vulputate faucibus.
+        Pellentesque blandit egestas metus, eu sagittis augue suscipit quis. Integer vitae eros aliquet, condimentum sem eu, sollicitudin massa.
+        Integer vel ante condimentum, dictum justo vitae, mollis arcu. Maecenas sed blandit turpis, eu tempus metus.
+    </p>
+
+    <h2>Keydown</h2>
+    <p id="log"></p>
+
+    <h2>Scroll/Retour vers le haut</h2>
+    <div>
+        <a id="cRetour" class="cInvisible" href="#haut">
+
+        </a>
+
+    </div>
+
+    <h2>Scroll/Position Scroll</h2>
+    <p id="demo"></p>
+    <div id="myDIV" onscroll="myFunction()">
+        <div id="content">Scroll ici!</div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

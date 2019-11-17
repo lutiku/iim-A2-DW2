@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Natif - Expérimentation 2</title>
+
+
+    <style>
+        #div1, #container {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            /*cursor :none ;*/
+        }
+
+        #div2{
+            width : 50px;
+            height: 50px ;
+            background-color: blue ;
+            position: relative;
+            top: 0;
+            left: 0;
+
+        }
+
+        .scare {
+            width : 50px;
+            height: 50px ;
+            background-color: blue ;
+            position: relative;
+            top: 0;
+            left: 0;
+
+        }
+
+        /*canvas { border: 1px solid black; }*/
+
+
+    </style>
+
+</head>
+<body>
+
+<input>
+
+    <h1>Expérimentation 2</h1>
+
+    <div id="div1">
+        <div id="div2" class="scare" onmousedown="on_mouse_down_square(event)"> </div>
+    </div>
+
+<!--<div  onload="draw();>
+<canvas  id="tutorial" width="150" height="150"></canvas>
+</div> -->
+
+<button  onclick="myFunction()">Ajouter</button>
+
+
+    <script src="app.js"></script>
+
+
+
+</body>
+</html>
