@@ -32,13 +32,13 @@ window.addEventListener('copy', (event) => {
  * Exercice 3 :
  * Ajoutez au document un event listener lorsqu'on tape sur le clavier, affichez le contenu de notre frappe dans la console
  */
-/*
+
 document.addEventListener('keydown', logKey);
 
 function logKey(e) {
     log.textContent += ` ${e.code}`;
     alert(`${e.code}`)
-}*/
+}
 
 /**
  * Exercice 4 :
